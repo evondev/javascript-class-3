@@ -1,5 +1,6 @@
 # Variables
 
+- Từ khóa hệ thống: new, function, var, let, const
 - _variables_: Dùng để lưu trữ giá trị
 - Khai báo biến thì dùng 1 trong 3 từ khóa là `let`, `const`, `var`
 - _variableName_: Bắt đầu với kí tự(a-z) hoặc gạch dưới(\_) hoặc dấu $
@@ -37,17 +38,3 @@
 - Khi khai báo biến với `let` hoặc `var` mà không gán giá trị gì cho nó thì mặc định sẽ là `undefined`
 - falsy values: false, 0, "", NaN, null, undefined
 - truthy values: không phải những giá trị truthy
-
-# Boolean
-
-- Chỉ có 2 giá trị là `true` hoặc `false`
-- Những giá trị falsy cần phải nhớ: false, null, undefined, NaN, 0, "", '', ``
-- Tất cả những giá trị không phải ở trên sẽ là truthy
-- Boolean(value), !!value -> chuyển đổi sang kiểu dữ liệu là boolean
-
-## Null & undefined
-
-- `undefined` là giá trị khi khai báo biến mà chưa gán giá trị gì cả đối với từ khóa `let` và `var`
-- Kiểu dữ liệu của `undefined` là `undefined`
-- Kiểu dữ liệu của `null` là `object`
-- `null` dùng để gán giá trị cho biến mà giá trị của nó nghĩa là không biết hoặc không có gì.
