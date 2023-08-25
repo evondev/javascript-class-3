@@ -2,14 +2,14 @@
 const arr = new Array(4); // [undefined, undefined, undefined, undefined]
 const arr2 = [1, 2, 3, 4]; // Literal
 const arr3 = new Array(1, 2, 3, 4); // Constructor
-console.log(arr2.length); // 4
-console.log(arr2[0]); // 1
-console.log(arr2[1]); // 2
-console.log(arr2[2]); // 3
+// console.log(arr2.length); // 4
+// console.log(arr2[0]); // 1
+// console.log(arr2[1]); // 2
+// console.log(arr2[2]); // 3
 const scores = [1, 2, 3, 4, 5];
 for (let index = 0; index < scores.length; index++) {
   const element = scores[index];
-  console.log("element:", element);
+  // console.log("element:", element);
 }
 const complexArr = [
   1,
@@ -18,7 +18,7 @@ const complexArr = [
   true,
   { name: "John", age: 30 },
   function () {
-    console.log("Hello");
+    // console.log("Hello");
   },
 ];
 // Array.isArray(value) -> true | false
@@ -40,7 +40,7 @@ numbers.includes(10); // false
 // ## concat
 const numbers2 = [6, 7, 8, 9, 10];
 const numbers3 = numbers.concat(numbers2); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-console.log("numbers3:", numbers3);
+// console.log("numbers3:", numbers3);
 // ## indexOf
 numbers.indexOf(3); // 2
 numbers.indexOf(10); // -1
@@ -55,8 +55,8 @@ numbers5.slice(1); // [2, 3, 4, 5]
 numbers5.slice(2); // [3, 4, 5]
 numbers5.slice(-3, -5); // []
 // ## splice
-console.log(numbers5.splice(1, 2)); // [2, 3]
-console.log(numbers5); // [1, 4, 5]
+// console.log(numbers5.splice(1, 2)); // [2, 3]
+// console.log(numbers5); // [1, 4, 5]
 numbers5.splice(1, 0, 10, 20, 30); // [1, 10, 20, 30, 2, 3, 4, 5]
 // ## at
 const numbers6 = [1, 2, 3, 4, 5];
@@ -72,7 +72,7 @@ numbers8.fill(0); // [0, 0, 0, 0, 0]
 // ## find
 const numbers9 = [1, 2, 3, 4, 5];
 const results = numbers9.find((element) => element > 3); // 4
-console.log("results:", results);
+// console.log("results:", results);
 // ## findIndex
 const numbers10 = [1, 2, 3, 4, 5];
 const results2 = numbers10.findIndex((element) => element > 3); // 3
@@ -96,5 +96,37 @@ const results7 = numbers15.every((element, index, arr) => element > 3); // false
 // ## forEach
 const numbers16 = [1, 2, 3, 4, 5];
 numbers16.forEach((element, index, arr) => {
-  console.log("element:", element);
+  // console.log("element:", element);
 });
+// ## flat
+const superComplexArr = [1, 2, [3, 4, [5, 6, [7, 8, [9, 10]]]]];
+// const results = [1,2,3,4,5,6,7...]
+const flatArr = superComplexArr.flat(Infinity);
+// console.log("flatArr:", flatArr);
+// ## fill
+const fillArray = new Array(4).fill(0, 2);
+// console.log("fillArray:", fillArray);
+// ## destructuring
+const values = [1, 2, 3];
+// const x = values[0];
+// const y = values[1];
+// const z = values[2];
+const [x, y, z] = [1, 2, 3];
+const [a, b, ...rest] = ["evondev", "trang", "han", "hao"];
+// console.log("rest:", rest);
+// console.log("a:", a);
+// ## sort
+const randomNumbers = [1, 100, 1000, 32, 56, 0];
+const sortedNumbers = randomNumbers.sort((a, b) => b - a);
+console.log("sortedNumbers:", sortedNumbers);
+// ## clone array
+{
+  const originalNumbers = [1, 2, 3, [4, 5, [6, 7]], 8];
+  // const cloneNumbers = originalNumbers.slice();
+  // spread operator
+  // const cloneNumbers = [...originalNumbers];
+  const cloneNumbers = JSON.parse(JSON.stringify(originalNumbers));
+  cloneNumbers[3][2][0] = 10;
+  console.log("cloneNumbers:", cloneNumbers);
+  console.log("originalNumbers:", originalNumbers);
+}

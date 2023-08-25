@@ -62,6 +62,7 @@
 - flat
 - fill
 - Destructuring
+- Rest parameters
 - [1,2,3,4,5,6]
 - Big O Notation
 - Time Complexity

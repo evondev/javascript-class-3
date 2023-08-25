@@ -10,3 +10,8 @@ if (conditional) {
   // body code
 }
 ```
+
+# ternary operator
+
+- 1 kiểu viết rút gọn điều kiện inline
+- conditional ? điều kiện đúng chạy vào đây : điều kiện sai chạy vào đây
