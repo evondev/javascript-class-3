@@ -51,6 +51,11 @@
         transform: translateY(-50%);
         right: var(--px);
       }
+      a.is-active {
+        text-decoration: none;
+        color: #6a5af9;
+        font-weight: bold;
+      }
     </style>
     <div class="input-wrapper">
       <input type="text" placeholder="Search courses..." class="input" />
@@ -79,6 +84,185 @@
         </svg>
       </div>
     </div>
-    <script src="./scripts/day5/array-exercises.js"></script>
+    <style>
+      .dropdown {
+        position: relative;
+        width: 100%;
+        max-width: 300px;
+        font-family: "Poppins", sans-serif;
+        display: none;
+        --spacing: 20px;
+        --radius: 8px;
+        --padding: 15px;
+        --border: #eee;
+      }
+      .dropdown.is-show {
+        display: block;
+      }
+      .dropdown-select {
+        padding: var(--padding);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        color: white;
+        background-color: #222428;
+        font-size: 12px;
+        transition: all 0.2s linear;
+      }
+      .dropdown:hover .dropdown-select {
+        border-color: #6a5af9;
+        box-shadow: 0 0 0 2px rgba(106, 90, 249, 0.5);
+      }
+      .dropdown-list {
+        position: absolute;
+        top: calc(100% + var(--spacing));
+        left: 0;
+        width: 100%;
+        z-index: 10;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.2s ease;
+        background-color: #333741;
+        padding: 10px;
+      }
+      .dropdown-list:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: var(--spacing);
+        transform: translateY(-100%);
+        background-color: transparent;
+        opacity: 0;
+      }
+      .dropdown-item {
+        padding: var(--padding);
+        cursor: pointer;
+        font-size: 12px;
+        color: white;
+        border-radius: inherit;
+      }
+      .dropdown-item:hover {
+        background-color: #2b2d35;
+      }
+      .dropdown:hover .dropdown-list {
+        opacity: 1;
+        visibility: visible;
+      }
+    </style>
+    <div class="dropdown" id="dropdown">
+      <div class="dropdown-select">
+        <span class="dropdown-value">VietNam</span>
+        <span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            style="width: 20px; height: 20px"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+        </span>
+      </div>
+      <div class="dropdown-list">
+        javascript
+        <div class="dropdown-item 1">American</div>
+        reactjs
+        <div class="dropdown-item 2">Canada</div>
+        <div class="dropdown-item 3">Australia</div>
+      </div>
+    </div>
+    <a href="https://evondev.com" role="link">Go to evondev.com</a>
+    <!-- beforebegin -->
+    <span class="empty">
+      <!-- afterbegin -->
+      evondev
+      <!-- beforeend -->
+    </span>
+    <!-- afterend -->
+    <div class="tab-wrapper"></div>
+    <style>
+      button.button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        color: white;
+        background-color: #2979ff;
+        border-radius: 12px;
+        outline: none;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+        gap: 20px;
+      }
+    </style>
+    <!-- <button class="button">
+      <span>Shopping now</span>
+      <span>Icon</span>
+    </button> -->
+    <script src="./scripts/day8/dom.js"></script>
+    <!-- <script>
+      class Car {
+        constructor(obj) {
+          this.id = obj.id;
+          this.name = obj.name;
+          this.type = obj.type;
+          this.capacity = obj.capacity;
+          this.gasoline = obj.gasoline;
+          this.price = obj.price;
+          this.discount_price = obj.discount_price;
+          this.description = obj.description;
+          this.steering = obj.steering;
+        }
+      }
+      const results = [];
+      const names = [
+        "Koenigsegg",
+        "Nissan GT - R",
+        "Rolls-Royce",
+        "All New Rush",
+        "CR  - V",
+        "All New Terios",
+        "MG ZX Exclusice",
+        "New MG ZS",
+        "MG ZX Excite ",
+      ];
+      const types = ["Sport", "SUV", "MPV", "Sedan", "Coupe", "Hatchback"];
+      const capacities = [2, 4, 6, 8, 10, 12];
+      function getRandomArbitrary(min, max) {
+        return Math.random() * (max - min) + min;
+      }
+      for (let index = 0; index < 10; index++) {
+        const item = {
+          id: crypto.randomUUID(),
+          name: names[Math.floor(Math.random() * names.length)],
+          type: types[Math.floor(Math.random() * types.length)],
+          capacity: capacities[Math.floor(Math.random() * capacities.length)],
+          description:
+            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis illum asperiores magni culpa eaque, architecto eveniet temporibus laudantium aperiam, iusto a itaque ea? Corporis quidem est odit harum labore possimus.",
+          steering: "Manual",
+          gasoline: Math.floor(getRandomArbitrary(80 + index, 200 + index)),
+          price: Math.floor(getRandomArbitrary(50 + index, 100 + index)),
+          discount_price: Math.floor(
+            getRandomArbitrary(70 + index, 130 + index)
+          ),
+        };
+        results.push(new Car(item));
+      }
+      console.log(JSON.stringify(results));
+    </script> -->
   </body>
 </html>
