@@ -81,31 +81,31 @@
 ## Offset
 
 - offset tính cả border
-- _DOM.offsetHeight_ -> Trả ra chiều cao của Element
-- _DOM.offsetWidth_ -> Trả ra chiều rộng của Element
-- _DOM.offsetTop_ -> Trả ra khoangr cách của Element so với body phía trên
-- _DOM.offsetLeft_ -> Trả ra khoảng cách của Element so với body bên trái
+- `DOM.offsetHeight` -> Trả ra chiều cao của Element
+- `DOM.offsetWidth` -> Trả ra chiều rộng của Element
+- `DOM.offsetTop` -> Trả ra khoảng cách của Element so với body phía trên
+- `DOM.offsetLeft` -> Trả ra khoảng cách của Element so với body bên trái
 
 ## Client
 
 - client không tính border
-- _DOM.clientHeight_ -> Trả ra chiều cao của Element
-- _DOM.clientWidth_ -> Trả ra chiều rộng của Element
-- _DOM.clientTop_ -> Trả ra khoangr cách của Element so với border top
-- _DOM.clientLeft_ -> Trả ra khoảng cách của Element so với border left
+- `DOM.clientHeight` -> Trả ra chiều cao của Element
+- `DOM.clientWidth` -> Trả ra chiều rộng của Element
+- `DOM.clientTop` -> Trả ra khoảng cách của Element so với border top của nó
+- `DOM.clientLeft` -> Trả ra khoảng cách của Element so với border left của nó
 
 ## Window
 
-- _window.scrollX_ -> Khoảng cách của scroll ngang so với bên trái
-- _window.scrollY_ -> Khoảng cách của scroll dọc so với bên trên
-- _window.innerWidth_ -> Độ rộng của màn hình máy tính
-- _window.outerWidth_ -> Độ rộng của màn hình(viewport width, có khi thay đổi do debug tool hiện thị lên)
-- _window.innerHeight_ -> Chiều cao của màn hình(viewport height)
-- _window.outerHeight_ -> Chiều cao của màn hình
-- _window.screenX_ -> Vị trí của window so với màn hình theo chiều ngang
-- _window.screenLeft_ -> Vị trí của window so với màn hình theo chiều ngang
-- _window.screenY_ -> Vị trí của window so với màn hình theo chiều dọc
-- _window.screenTop_ -> Vị trí của window so với màn hình theo chiều dọc
+- `window.scrollX` -> Khoảng cách của scroll ngang so với bên trái
+- `window.scrollY` -> Khoảng cách của scroll dọc so với bên trên
+- `window.innerWidth` -> Độ rộng của màn hình máy tính(viewport width, có khi thay đổi do debug tool hiện thị lên)
+- `window.outerWidth` -> Độ rộng của màn hình
+- `window.innerHeight` -> Chiều cao của màn hình(viewport width, có khi thay đổi do debug tool hiện thị lên)
+- `window.outerHeight` -> Chiều cao của màn hình
+- `window.screenX` -> Vị trí của window so với màn hình theo chiều ngang
+- `window.screenLeft` -> Vị trí của window so với màn hình theo chiều ngang
+- `window.screenY` -> Vị trí của window so với màn hình theo chiều dọc
+- `window.screenTop` -> Vị trí của window so với màn hình theo chiều dọc
 
 ## getBoundingClientRect
 
@@ -119,7 +119,5 @@
 
 # DOM - Document Object Model
 
-- `window.innerHeight` sẽ trả ra viewport height
 - `document.body.scrollHeight` -> trả ra chiều cao của body bao gồm cả scroll
-- `window.scrollY` -> khoảng cách khi scroll theo chiều dọc
 - `window.location` -> 1 object chứa nhiều thông tin domain

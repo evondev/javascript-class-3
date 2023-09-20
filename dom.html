@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600;700&display=swap");
+      *,
+      *:before,
+      *:after {
+        box-sizing: border-box;
+        font-family: "Epilogue", sans-serif;
+      }
+      .input-wrapper {
+        --mw: 350px;
+        --py: 15px;
+        --px: 25px;
+        --radius: 4px;
+        --border: 1px solid #f1f1f3;
+        --focus: #6a5af9;
+        width: 100%;
+        max-width: var(--mw);
+        position: relative;
+      }
+      .input-wrapper .input {
+        width: 100%;
+        padding: var(--py) calc(var(--px) * 2.5) var(--py) var(--px);
+        border-radius: var(--radius);
+        border: var(--border);
+        outline: none;
+        background-color: transparent;
+        font-family: inherit;
+        font-size: 14px;
+        transition: all 0.2s linear;
+        line-height: 1;
+      }
+      .input-wrapper .input:focus {
+        border-color: var(--focus);
+      }
+      .input-wrapper .icon svg {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .input-wrapper .icon {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: var(--px);
+      }
+      a.is-active {
+        text-decoration: none;
+        color: #6a5af9;
+        font-weight: bold;
+      }
+    </style>
+    <style>
+      .boxed {
+        width: 100px;
+        height: 100px;
+        border-radius: 12px;
+        background-color: #6a5af9;
+        padding: 20px;
+        /* border: 5px solid #ffb86c; */
+      }
+      body {
+        height: 200vh;
+      }
+      .progress-bar {
+        height: 5px;
+        background-color: #ff6651;
+        width: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        transition: width 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+      }
+    </style>
+    <div class="progress-bar"></div>
+    <div class="box-wrapper">
+      <div class="boxed"></div>
+    </div>
+    <div style="height: 100vh"></div>
+    <div style="height: 100vh; background-color: #6a5af9"></div>
+    <script src="./scripts/day9/events.js"></script>
+  </body>
+</html>
