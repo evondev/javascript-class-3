@@ -4,87 +4,98 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./styles/app.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600;700&display=swap");
-      *,
-      *:before,
-      *:after {
-        box-sizing: border-box;
-        font-family: "Epilogue", sans-serif;
-      }
-      .input-wrapper {
-        --mw: 350px;
-        --py: 15px;
-        --px: 25px;
-        --radius: 4px;
-        --border: 1px solid #f1f1f3;
-        --focus: #6a5af9;
-        width: 100%;
-        max-width: var(--mw);
-        position: relative;
-      }
-      .input-wrapper .input {
-        width: 100%;
-        padding: var(--py) calc(var(--px) * 2.5) var(--py) var(--px);
-        border-radius: var(--radius);
-        border: var(--border);
-        outline: none;
-        background-color: transparent;
-        font-family: inherit;
-        font-size: 14px;
-        transition: all 0.2s linear;
-        line-height: 1;
-      }
-      .input-wrapper .input:focus {
-        border-color: var(--focus);
-      }
-      .input-wrapper .icon svg {
-        display: inline-block;
-        vertical-align: middle;
-      }
-      .input-wrapper .icon {
-        cursor: pointer;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        right: var(--px);
-      }
-      a.is-active {
-        text-decoration: none;
-        color: #6a5af9;
-        font-weight: bold;
-      }
-    </style>
-    <style>
-      .boxed {
-        width: 100px;
-        height: 100px;
-        border-radius: 12px;
-        background-color: #6a5af9;
-        padding: 20px;
-        /* border: 5px solid #ffb86c; */
-      }
-      body {
-        height: 200vh;
-      }
-      .progress-bar {
-        height: 5px;
-        background-color: #ff6651;
-        width: 0;
-        position: fixed;
-        top: 0;
-        left: 0;
-        transition: width 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
-      }
-    </style>
-    <div class="progress-bar"></div>
-    <div class="box-wrapper">
-      <div class="boxed"></div>
+    <!-- <div class="progress-bar"></div> -->
+    <!-- <div class="tab">
+      <div class="tab-header">
+        <div class="tab-item is-active" data-index="1">Trending</div>
+        <div class="tab-item" data-index="2">Popular</div>
+        <div class="tab-item" data-index="3">Latest</div>
+      </div>
+      <div class="tab-main">
+        <div class="tab-content is-active" data-index="1">Trending content</div>
+        <div class="tab-content" data-index="2">Popular content</div>
+        <div class="tab-content" data-index="3">Latest content</div>
+      </div>
+    </div> -->
+    <!-- <div class="dropdown">
+      <button class="user dropdown-button">
+        <img
+          src="https://images.unsplash.com/photo-1564564321837-a57b7070ac4f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1476&q=80"
+          alt=""
+        />
+      </button>
+      <div class="dropdown-list"></div>
+    </div> -->
+    <!-- <button class="button-connect">Connect account</button>
+    <div class="modal" id="modal-account">
+      <div class="modal-overlay"></div>
+      <div class="modal-content">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="modal-close"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </div>
+    </div> -->
+    <div class="slider">
+      <div class="slider-button slider-prev">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 19.5L8.25 12l7.5-7.5"
+          />
+        </svg>
+      </div>
+      <div class="slider-item">
+        <img
+          src="https://images.unsplash.com/photo-1490598000245-075175152d25?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3270&q=80"
+          alt=""
+          class="slider-image"
+        />
+      </div>
+      <div class="slider-button slider-next">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M8.25 4.5l7.5 7.5-7.5 7.5"
+          />
+        </svg>
+      </div>
     </div>
-    <div style="height: 100vh"></div>
-    <div style="height: 100vh; background-color: #6a5af9"></div>
-    <script src="./scripts/day9/events.js"></script>
+    <script src="./scripts/day10/slider.js"></script>
   </body>
 </html>

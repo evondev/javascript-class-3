@@ -1,4 +1,5 @@
 // # progressbar scroll
+/*
 {
   const bodyHeight = document.body.scrollHeight;
   const progressbar = document.querySelector(".progress-bar");
@@ -11,3 +12,4 @@
   }
   window.addEventListener("scroll", handleProgressBar);
 }
+*/
