@@ -192,3 +192,118 @@ body {
   width: 20px;
   height: 20px;
 }
+/* Menu */
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.menu-item {
+  cursor: pointer;
+  position: relative;
+}
+.menu-line {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 0;
+  height: 2px;
+  background-color: #6a5af9;
+  transition: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+/* Portal */
+.table {
+  overflow-x: auto;
+}
+.table table {
+  width: 100%;
+}
+.table img {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.table :where(th, td) {
+  text-align: left;
+  vertical-align: middle;
+  padding: 20px;
+  white-space: nowrap;
+}
+.table button {
+  width: 20px;
+  height: 20px;
+}
+.dropdown-table {
+  position: relative;
+}
+.dropdown-list-table.is-show {
+  opacity: 1;
+  visibility: visible;
+}
+.dropdown-list-table {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+  background-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  z-index: 10;
+  height: 250px;
+  padding: 12px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+}
+.dropdown-list-table > div {
+  padding: 10px;
+}
+/* Password toggle */
+.input-wrapper {
+  --mw: 350px;
+  --py: 15px;
+  --px: 25px;
+  --radius: 4px;
+  --border: 1px solid #f1f1f3;
+  --focus: #6a5af9;
+  width: 100%;
+  max-width: var(--mw);
+  position: relative;
+}
+.input-wrapper .input {
+  width: 100%;
+  padding: var(--py) calc(var(--px) * 2.5) var(--py) var(--px);
+  border-radius: var(--radius);
+  border: var(--border);
+  outline: none;
+  background-color: transparent;
+  font-family: inherit;
+  font-size: 14px;
+  transition: all 0.2s linear;
+  line-height: 1;
+}
+.input-wrapper .input:focus {
+  border-color: var(--focus);
+}
+.input-wrapper .icon svg {
+  display: inline-block;
+  vertical-align: middle;
+}
+.input-wrapper .icon {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: var(--px);
+}
+.input-wrapper .icon > svg {
+  width: 24px;
+  height: 24px;
+}
+.input-wrapper .icon .icon-eye {
+  display: none;
+}
+.input-wrapper .icon .icon-eye.is-active {
+  display: block;
+}
